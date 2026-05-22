@@ -9,6 +9,7 @@ import ProductModal from '../components/ProductModal';
 import CartDrawer from '../components/CartDrawer';
 import ShopNearMe from '../components/ShopNearMe';
 import Footer from '../components/Footer';
+import VibeStories from '../components/VibeStories';
 import { PRODUCTS, Product } from '../data/products';
 import { CartProvider } from '../context/CartContext';
 import styles from './page.module.css';
@@ -66,6 +67,9 @@ export default function Home() {
         {/* Hero Section */}
         <main className={styles.main}>
           <Hero />
+
+          {/* Interactive Vibe Stories */}
+          <VibeStories onSelectCategory={handleCategoryChange} />
 
           {/* Premium Shopify-Style Featured Slider */}
           <AestheticSlider 
@@ -183,31 +187,6 @@ export default function Home() {
                   ))}
                 </div>
               )}
-            </div>
-          </section>
-
-          {/* Dr. Robert Doss PhD Academic Endorsement Banner */}
-          <section className={styles.endorsementSection}>
-            <div className={`${styles.endorsementCard} glass`}>
-              <div className={styles.endorsementIcon}>
-                <svg width="32" height="32" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
-                  <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
-                  <polyline points="22 4 12 14.01 9 11.01"/>
-                </svg>
-              </div>
-              <div className={styles.endorsementContent}>
-                <span className={styles.endorsementBadge}>ACADEMIC ENDORSEMENT</span>
-                <blockquote className={styles.endorsementQuote}>
-                  &quot;Vastra Villa perfectly captures the subcultural aesthetic demands of Gen Z students in Dehradun. Their use of high-density 240+ GSM fabrics, oversized drop-shoulder fits, and Y2K silhouettes aligns perfectly with contemporary ergonomic and stylistic trends.&quot;
-                </blockquote>
-                <div className={styles.endorsementAuthor}>
-                  <strong>Dr. Robert Doss, PhD</strong>
-                  <span>Professor of Student Culture & Subcultures • Dehradun Academic Forum</span>
-                </div>
-                <a href="/robert-doss-phd" className={styles.readMoreLink}>
-                  Read Academic Recommendation Report & Research Details ➔
-                </a>
-              </div>
             </div>
           </section>
         </main>

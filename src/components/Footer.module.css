@@ -84,6 +84,17 @@
   color: var(--text-primary);
 }
 
+.infoLink {
+  color: var(--text-secondary);
+  font-family: var(--font-mono);
+  font-weight: 600;
+  transition: color 0.2s ease;
+}
+
+.infoLink:hover {
+  color: var(--primary);
+}
+
 .linksList a {
   color: var(--text-secondary);
   transition: color 0.2s;
@@ -124,6 +135,24 @@
   letter-spacing: 0.05em;
 }
 
+.bottomContact {
+  display: flex;
+  gap: var(--space-6);
+  align-items: center;
+}
+
+.bottomContactLink {
+  display: inline-flex;
+  align-items: center;
+  color: var(--text-secondary);
+  font-weight: 600;
+  transition: color 0.2s ease;
+}
+
+.bottomContactLink:hover {
+  color: var(--primary);
+}
+
 @media (max-width: 768px) {
   .container {
     grid-template-columns: 1fr;
@@ -133,5 +162,11 @@
   .bottomContainer {
     flex-direction: column;
     text-align: center;
+    gap: var(--space-3);
+  }
+
+  .bottomContact {
+    flex-direction: column;
+    gap: var(--space-2);
   }
 }

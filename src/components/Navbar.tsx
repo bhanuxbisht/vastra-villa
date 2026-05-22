@@ -47,14 +47,14 @@ export default function Navbar({ onCartToggle }: NavbarProps) {
       className={`${styles.header} ${scrolled ? styles.scrolled : ''} ${mobileMenuOpen ? styles.mobileOpen : ''} glass`}
     >
       <div className={styles.container}>
-        <div className={styles.brand}>
-          <a href="#hero" className="brand-logo" onClick={() => setMobileMenuOpen(false)}>VASTRA VILLA</a>
+        <a href="#hero" className={styles.brand} onClick={() => setMobileMenuOpen(false)}>
+          <span className={styles.logoText}>VASTRA VILLA</span>
           <span className={styles.subBrand}>Aesthetic Vibe</span>
-        </div>
+        </a>
 
         <nav className={styles.nav}>
           <a href="#catalog" className={styles.navLink}>Catalog</a>
-          <a href="#near-me" className={styles.navLink}>Shop Near Me</a>
+          <a href="#near-me" className={styles.navLink}>Find Us</a>
           <a href="#about" className={styles.navLink}>Store Hours</a>
         </nav>
 
@@ -151,7 +151,7 @@ export default function Navbar({ onCartToggle }: NavbarProps) {
               className={styles.mobileNavLink} 
               onClick={() => setMobileMenuOpen(false)}
             >
-              Shop Near Me
+              Find Us
             </motion.a>
             <motion.a 
               variants={{

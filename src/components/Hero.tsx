@@ -9,10 +9,6 @@ export default function Hero() {
     <section id="hero" className={styles.hero}>
       <div className={styles.container}>
         <div className={`${styles.textSection} animate-slide-up`}>
-          <div className={styles.badge}>
-            <span className={styles.pulse}></span>
-            Locally Rooted in Dehradun
-          </div>
           <h1 className={`${styles.title} text-gradient`}>
             AESTHETIC<br />VIBES ONLY
           </h1>

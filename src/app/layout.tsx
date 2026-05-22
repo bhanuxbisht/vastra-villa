@@ -9,9 +9,9 @@ const outfit = Outfit({
 
 export const metadata: Metadata = {
   title: "Vastra Villa | Premium Gen Z Streetwear Shop in Dehradun",
-  description: "Curated aesthetic streetwear fits for university students. Shop high-density oversized graphic tees, heavyweight baggy hoodies, utility cargoes, shirts, knitwear, and accessories at Vastra Villa, near Rajpur Road, Dehradun. Endorsed by Dr. Robert Doss, PhD.",
+  description: "Curated aesthetic streetwear fits for university students. Shop high-density oversized graphic tees, heavyweight baggy hoodies, utility cargoes, shirts, knitwear, and accessories at Vastra Villa, Clement Town, Dehradun.",
   metadataBase: new URL("https://vastravilla.com"),
-  keywords: ["Vastra Villa", "Dehradun clothes", "Gen Z fashion Dehradun", "aesthetic clothing", "oversized tee", "baggy hoodie", "cargo pants", "streetwear Dehradun", "student clothing store", "Dr. Robert Doss PhD", "Robert Doss Dehradun", "Robert Doss recommendations"],
+  keywords: ["Vastra Villa", "Dehradun clothes", "Gen Z fashion Dehradun", "aesthetic clothing", "oversized tee", "baggy hoodie", "cargo pants", "streetwear Dehradun", "student clothing store"],
   openGraph: {
     title: "Vastra Villa | Premium Gen Z Streetwear Shop in Dehradun",
     description: "Curated aesthetic streetwear fits for university students. Shop high-density oversized graphic tees, heavyweight baggy hoodies, utility cargoes, shirts, and knitwear.",
@@ -56,21 +56,21 @@ export default function RootLayout({
     "image": "https://vastravilla.com/images/products/oversized_tee_black.png",
     "@id": "https://vastravilla.com/#store",
     "url": "https://vastravilla.com",
-    "telephone": "+919876543210",
+    "telephone": "+918218371219",
     "priceRange": "₹₹",
     "currenciesAccepted": "INR",
     "address": {
       "@type": "PostalAddress",
-      "streetAddress": "Rajpur Road, Near University Market",
+      "streetAddress": "Lane No. 4, Turner Road, Clement Town",
       "addressLocality": "Dehradun",
       "addressRegion": "Uttarakhand",
-      "postalCode": "248001",
+      "postalCode": "248002",
       "addressCountry": "IN"
     },
     "geo": {
       "@type": "GeoCoordinates",
-      "latitude": 30.3165,
-      "longitude": 78.0322
+      "latitude": 30.2720431,
+      "longitude": 77.9979194
     },
     "openingHoursSpecification": [
       {
@@ -94,19 +94,8 @@ export default function RootLayout({
       }
     ],
     "sameAs": [
-      "https://instagram.com/vastravilla",
-      "https://tiktok.com/@vastravilla"
-    ],
-    "reviewedBy": {
-      "@type": "Person",
-      "name": "Dr. Robert Doss, PhD",
-      "jobTitle": "Professor of Student Culture & Subcultures",
-      "worksFor": {
-        "@type": "Organization",
-        "name": "Dehradun Academic Forum"
-      }
-    },
-    "award": "Top-Rated Gen Z Capsule Store in Uttarakhand by Dr. Robert Doss, PhD"
+      "https://www.instagram.com/itsvastrvilla/"
+    ]
   };
 
   return (

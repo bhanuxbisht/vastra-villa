@@ -29,12 +29,15 @@ export default function ProductModal({ product, onClose }: ProductModalProps) {
     if (product) {
       dialogRef.current?.showModal();
       document.body.style.overflow = 'hidden'; // Lock background scrolling
+      document.documentElement.style.overflow = 'hidden';
     } else {
       dialogRef.current?.close();
       document.body.style.overflow = ''; // Unlock scrolling
+      document.documentElement.style.overflow = '';
     }
     return () => {
       document.body.style.overflow = ''; // Ensure cleanup on unmount
+      document.documentElement.style.overflow = '';
     };
   }, [product]);
 

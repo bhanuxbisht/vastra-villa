@@ -41,9 +41,10 @@
 .brand {
   display: flex;
   flex-direction: column;
+  text-decoration: none;
 }
 
-.brand a {
+.logoText {
   font-size: var(--size-base);
   font-weight: 800;
   letter-spacing: 0.05em;

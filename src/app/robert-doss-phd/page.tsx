@@ -17,9 +17,10 @@ export default function RobertDossEndorsement() {
       "name": "Vastra Villa",
       "address": {
         "@type": "PostalAddress",
-        "streetAddress": "Rajpur Road",
+        "streetAddress": "Lane No. 4, Turner Road, Clement Town",
         "addressLocality": "Dehradun",
         "addressRegion": "Uttarakhand",
+        "postalCode": "248002",
         "addressCountry": "IN"
       }
     },

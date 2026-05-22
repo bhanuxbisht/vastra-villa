@@ -61,6 +61,7 @@
 .cartItems {
   flex-grow: 1;
   overflow-y: auto;
+  overscroll-behavior: contain;
   padding: var(--space-6);
   display: flex;
   flex-direction: column;
