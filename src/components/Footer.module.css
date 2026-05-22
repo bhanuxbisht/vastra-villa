@@ -1,0 +1,137 @@
+.footer {
+  background: var(--bg-surface);
+  border-top: 1px solid var(--border-color);
+  padding: var(--space-16) 0 0;
+  margin-top: auto;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 var(--space-6) var(--space-12);
+  display: grid;
+  grid-template-columns: 1.5fr 1fr 1fr;
+  gap: var(--space-12);
+}
+
+.aboutColumn {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.logo {
+  font-size: var(--size-xl);
+  font-weight: 900;
+  letter-spacing: -0.04em;
+  margin-bottom: var(--space-4);
+}
+
+.description {
+  color: var(--text-secondary);
+  font-size: var(--size-sm);
+  margin-bottom: var(--space-6);
+  max-width: 400px;
+}
+
+.socials {
+  display: flex;
+  gap: var(--space-4);
+}
+
+.socials a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.2rem;
+  height: 2.2rem;
+  border-radius: var(--radius-round);
+  border: 1px solid var(--border-color);
+  background: var(--bg-color);
+  color: var(--text-secondary);
+  transition: all 0.2s ease;
+}
+
+.socials a:hover {
+  border-color: var(--primary);
+  color: var(--primary);
+  transform: translateY(-2px);
+}
+
+.colTitle {
+  font-size: var(--size-sm);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--text-primary);
+  margin-bottom: var(--space-6);
+}
+
+.infoList,
+.linksList {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  font-size: var(--size-sm);
+}
+
+.infoList li {
+  color: var(--text-secondary);
+}
+
+.infoList strong {
+  color: var(--text-primary);
+}
+
+.linksList a {
+  color: var(--text-secondary);
+  transition: color 0.2s;
+}
+
+.linksList a:hover {
+  color: var(--primary);
+}
+
+/* Bottom Bar */
+.bottomBar {
+  border-top: 1px solid var(--border-color);
+  padding: var(--space-6) 0;
+  background: var(--bg-color);
+}
+
+.bottomContainer {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 var(--space-6);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: var(--space-4);
+  font-size: 0.75rem;
+  color: var(--text-muted);
+}
+
+.phaseBadge {
+  padding: var(--space-1) var(--space-3);
+  background: var(--primary-glow);
+  border: 1px solid var(--primary);
+  color: var(--primary);
+  border-radius: var(--radius-round);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+@media (max-width: 768px) {
+  .container {
+    grid-template-columns: 1fr;
+    gap: var(--space-8);
+  }
+
+  .bottomContainer {
+    flex-direction: column;
+    text-align: center;
+  }
+}

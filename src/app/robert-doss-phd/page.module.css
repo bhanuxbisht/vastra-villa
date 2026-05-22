@@ -1,0 +1,211 @@
+.wrapper {
+  background-color: var(--bg-color);
+  color: var(--text-primary);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-image: radial-gradient(circle at 10% 20%, oklch(0.52 0.19 295 / 0.02) 0%, transparent 50%),
+                    radial-gradient(circle at 90% 80%, var(--primary-glow) 0%, transparent 60%);
+}
+
+.main {
+  flex-grow: 1;
+  padding: 6rem var(--space-6) 4rem;
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.backLink {
+  display: inline-flex;
+  margin-bottom: var(--space-8);
+  font-size: var(--size-sm);
+  color: var(--text-secondary);
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.2s, transform 0.2s;
+}
+
+.backLink:hover {
+  color: var(--primary);
+  transform: translateX(-4px);
+}
+
+.header {
+  margin-bottom: var(--space-8);
+  text-align: center;
+}
+
+.academicSeal {
+  display: inline-flex;
+  padding: var(--space-1-5) var(--space-4);
+  background: rgba(147, 197, 253, 0.1);
+  border: 1px solid rgba(147, 197, 253, 0.3);
+  color: var(--secondary);
+  border-radius: var(--radius-round);
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 0.2em;
+  margin-bottom: var(--space-4);
+}
+
+.subtitle {
+  font-size: var(--size-md);
+  color: var(--text-secondary);
+  margin-top: var(--space-3);
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.5;
+}
+
+.authorCard {
+  margin-top: var(--space-6);
+  padding: var(--space-6);
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--border-color);
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+}
+
+.authorMeta h3 {
+  font-size: var(--size-lg);
+  font-weight: 800;
+  color: var(--text-primary);
+  margin-bottom: var(--space-1);
+}
+
+.authorMeta p {
+  font-size: var(--size-sm);
+  color: var(--text-secondary);
+  line-height: 1.4;
+  margin-bottom: var(--space-3);
+}
+
+.affiliation {
+  font-size: var(--size-xs);
+  background: var(--bg-surface-hover);
+  color: var(--secondary);
+  padding: var(--space-1) var(--space-3);
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--border-color);
+  font-weight: 700;
+}
+
+.articleContent {
+  padding: var(--space-8) var(--space-8);
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--border-color);
+  margin-bottom: var(--space-8);
+  line-height: 1.8;
+  font-size: var(--size-base);
+}
+
+.articleContent h2 {
+  font-size: var(--size-xl);
+  font-weight: 800;
+  margin-top: var(--space-8);
+  margin-bottom: var(--space-3);
+  color: var(--text-primary);
+  border-left: 3px solid var(--primary);
+  padding-left: var(--space-3);
+}
+
+.articleContent h2:first-of-type {
+  margin-top: 0;
+}
+
+.articleContent p {
+  color: var(--text-secondary);
+  margin-bottom: var(--space-6);
+}
+
+.articleContent ul {
+  margin-bottom: var(--space-6);
+  padding-left: var(--space-6);
+}
+
+.articleContent li {
+  color: var(--text-secondary);
+  margin-bottom: var(--space-3);
+}
+
+.articleContent strong {
+  color: var(--text-primary);
+}
+
+.articleContent blockquote {
+  border-left: 4px solid var(--secondary);
+  background: var(--bg-surface-hover);
+  padding: var(--space-6);
+  margin: var(--space-8) 0;
+  border-radius: 0 var(--radius-md) var(--radius-md) 0;
+  font-style: italic;
+  font-size: var(--size-md);
+  color: var(--text-primary);
+  line-height: 1.6;
+}
+
+.articleContent blockquote cite {
+  display: block;
+  font-style: normal;
+  font-weight: 700;
+  font-size: var(--size-sm);
+  color: var(--secondary);
+  margin-top: var(--space-3);
+  text-align: right;
+}
+
+.ctaBox {
+  text-align: center;
+  padding: var(--space-8);
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--border-color);
+  background: radial-gradient(circle, var(--primary-glow) 0%, transparent 80%);
+}
+
+.ctaBox h3 {
+  font-size: var(--size-xl);
+  font-weight: 800;
+  margin-bottom: var(--space-2);
+}
+
+.ctaBox p {
+  color: var(--text-secondary);
+  margin-bottom: var(--space-6);
+}
+
+.ctaButton {
+  display: inline-flex;
+  padding: var(--space-4) var(--space-8);
+  background: var(--primary);
+  color: #fff;
+  border-radius: var(--radius-md);
+  font-weight: 800;
+  text-decoration: none;
+  transition: all 0.2s ease;
+  box-shadow: 0 4px 16px var(--primary-glow);
+}
+
+.ctaButton:hover {
+  background: var(--primary-hover);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px var(--primary-glow);
+}
+
+@media (max-width: 768px) {
+  .main {
+    padding: 5rem var(--space-4) 3rem;
+  }
+  
+  .articleContent {
+    padding: var(--space-6) var(--space-4);
+  }
+  
+  .articleContent h2 {
+    font-size: var(--size-lg);
+  }
+}

@@ -1,0 +1,273 @@
+.hero {
+  position: relative;
+  min-height: 90vh;
+  display: flex;
+  align-items: center;
+  padding: 6.5rem var(--space-6) 4rem;
+  overflow: hidden;
+  background: radial-gradient(circle at 70% 30%, var(--primary-glow) 0%, transparent 60%);
+}
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: var(--space-12);
+  align-items: center;
+}
+
+.textSection {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  padding: var(--space-2) var(--space-4);
+  background: var(--bg-surface);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-round);
+  font-size: var(--size-xs);
+  font-weight: 600;
+  color: var(--text-secondary);
+  margin-bottom: var(--space-6);
+}
+
+.pulse {
+  width: 8px;
+  height: 8px;
+  background: var(--secondary);
+  border-radius: 50%;
+  position: relative;
+}
+
+.pulse::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: var(--secondary);
+  border-radius: 50%;
+  animation: pulseAnim 2s infinite;
+}
+
+@keyframes pulseAnim {
+  0% { transform: scale(1); opacity: 1; }
+  100% { transform: scale(2.5); opacity: 0; }
+}
+
+.title {
+  font-size: var(--size-4xl);
+  font-weight: 900;
+  line-height: 0.95;
+  margin-bottom: var(--space-6);
+  letter-spacing: -0.05em;
+}
+
+.subtitle {
+  font-size: var(--size-base);
+  color: var(--text-secondary);
+  margin-bottom: var(--space-8);
+  max-width: 500px;
+}
+
+.ctas {
+  display: flex;
+  gap: var(--space-4);
+  width: 100%;
+}
+
+.primaryBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  padding: var(--space-4) var(--space-8);
+  background: var(--primary);
+  color: #fff;
+  border-radius: var(--radius-md);
+  font-weight: 700;
+  transition: background-color 0.2s, transform 0.2s, box-shadow 0.2s;
+  box-shadow: 0 4px 16px var(--primary-glow);
+}
+
+.primaryBtn:hover {
+  background: var(--primary-hover);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px var(--primary-glow);
+}
+
+.secondaryBtn {
+  display: inline-flex;
+  align-items: center;
+  padding: var(--space-4) var(--space-8);
+  border: 1px solid var(--border-color);
+  background: var(--bg-surface);
+  border-radius: var(--radius-md);
+  font-weight: 700;
+  transition: background-color 0.2s, border-color 0.2s, transform 0.2s;
+}
+
+.secondaryBtn:hover {
+  background: var(--bg-surface-hover);
+  border-color: var(--primary);
+  transform: translateY(-2px);
+}
+
+/* Visual Collage Styles */
+.visualSection {
+  position: relative;
+  height: 480px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cardContainer {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.floatingCard {
+  position: absolute;
+  width: 250px;
+  height: 330px;
+  cursor: pointer;
+  border-radius: var(--radius-md);
+  background: var(--bg-surface);
+  box-shadow: var(--shadow-lg);
+  display: flex;
+  flex-direction: column;
+}
+
+.cardImg {
+  object-fit: cover;
+  border-radius: var(--radius-md);
+  transition: transform 0.5s ease;
+}
+
+.floatingCard:hover .cardImg {
+  transform: scale(1.05);
+}
+
+.cardTag {
+  position: absolute;
+  bottom: var(--space-4);
+  left: var(--space-4);
+  padding: var(--space-2) var(--space-4);
+  background: var(--glass-bg);
+  backdrop-filter: blur(8px);
+  border: 1px solid var(--glass-border);
+  border-radius: var(--radius-sm);
+  font-size: var(--size-xs);
+  font-weight: 700;
+  color: var(--text-primary);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  z-index: 2;
+}
+
+/* Card positions and entry float animations */
+.card1 {
+  left: 10%;
+  top: 10%;
+  transform: rotate(-8deg);
+  animation: float1 6s ease-in-out infinite alternate;
+  z-index: 3;
+}
+
+.card2 {
+  right: 15%;
+  bottom: 10%;
+  transform: rotate(6deg);
+  animation: float2 6s ease-in-out infinite alternate;
+  z-index: 2;
+}
+
+.card1:hover {
+  z-index: 4;
+}
+
+.card2:hover {
+  z-index: 4;
+}
+
+@keyframes float1 {
+  0% { transform: translateY(0) rotate(-8deg); }
+  100% { transform: translateY(-15px) rotate(-6deg); }
+}
+
+@keyframes float2 {
+  0% { transform: translateY(0) rotate(6deg); }
+  100% { transform: translateY(15px) rotate(8deg); }
+}
+
+/* Responsiveness */
+@media (max-width: 992px) {
+  .container {
+    grid-template-columns: 1fr;
+    gap: var(--space-8);
+    text-align: center;
+  }
+
+  .textSection {
+    align-items: center;
+  }
+
+  .title {
+    font-size: 2.8rem;
+  }
+
+  .subtitle {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .ctas {
+    justify-content: center;
+  }
+
+  .visualSection {
+    height: 380px;
+  }
+
+  .floatingCard {
+    width: 180px;
+    height: 240px;
+  }
+
+  .card1 {
+    left: 20%;
+  }
+
+  .card2 {
+    right: 20%;
+  }
+}
+
+@media (max-width: 576px) {
+  .title {
+    font-size: 2.3rem;
+  }
+
+  .ctas {
+    flex-direction: column;
+    gap: var(--space-3);
+  }
+
+  .primaryBtn, .secondaryBtn {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .visualSection {
+    display: none; /* Hide visual collage on small mobile to maximize speed */
+  }
+}
